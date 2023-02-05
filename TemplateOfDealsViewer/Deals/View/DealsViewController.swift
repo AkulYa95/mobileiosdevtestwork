@@ -1,9 +1,10 @@
 import UIKit
 
-class ViewController: UIViewController {
+class DealsViewController: UIViewController {
   private let server = Server()
   private var model: [Deal] = []
-  @IBOutlet weak var tableView: UITableView!
+    
+  @IBOutlet private weak var tableView: UITableView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -21,13 +22,13 @@ class ViewController: UIViewController {
   }
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension DealsViewController: UITableViewDataSource, UITableViewDelegate {
   func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    1
+      model.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

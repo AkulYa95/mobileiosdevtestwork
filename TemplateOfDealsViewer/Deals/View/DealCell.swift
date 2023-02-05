@@ -3,10 +3,10 @@ import UIKit
 class DealCell: UITableViewCell {
   static let reuseIidentifier = "DealCell"
   
-  @IBOutlet weak var instrumentNameLabel: UILabel!
-  @IBOutlet weak var priceLabel: UILabel!
-  @IBOutlet weak var amountLabel: UILabel!
-  @IBOutlet weak var sideLabel: UILabel!
+  @IBOutlet private weak var instrumentNameLabel: UILabel!
+  @IBOutlet private weak var priceLabel: UILabel!
+  @IBOutlet private weak var amountLabel: UILabel!
+  @IBOutlet private weak var sideLabel: UILabel!
   
   override func awakeFromNib() {
         super.awakeFromNib()
